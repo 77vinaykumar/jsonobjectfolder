@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Example</title>
+</head>
+<body>
+    <h2>JSON Example</h2>
+    <!-- here is id for output shown of json -->
+    <p id= "jl"></p>
+    
+    <script>
+        //  here is input data in json object format
+        const myJSON = '{"school Name":"SBOA", "year": 30, "Rank in city": 1, "No. of students studying": 1000 }';
+        const myObj = JSON.parse(myJSON);
+        
+        // here use for in loop for catch all the key and value 
+        let text = "";
+        for (const i in myObj) {
+            text += i + " = " + myObj[i] + "<br>";
+        }
+        document.getElementById("jl").innerHTML = text;
+
+    </script>
+        
+</body>
+</html>
