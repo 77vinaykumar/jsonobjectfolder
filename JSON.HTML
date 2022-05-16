@@ -7,22 +7,23 @@
     <title>JSON Example</title>
 </head>
 <body>
-    <h2>JSON Example</h2>
+    <!-- <h2>JSON Example</h2> -->
     <!-- here is id for output shown of json -->
-    <p id= "jl"></p>
+    <!-- <p id= "jl"></p> -->
     
     <script>
         //  here is input data in json object format
-        const myJSON = '{"school Name":"SBOA", "year": 30, "Rank in city": 1, "No. of students studying": 1000 }';
-        const myObj = JSON.parse(myJSON);
-        
-        // here use for in loop for catch all the key and value 
-        let text = "";
-        for (const i in myObj) {
-            text += i + " = " + myObj[i] + "<br>";
-        }
-        document.getElementById("jl").innerHTML = text;
-
+        var JSONObj = {"name":"SBOA",
+         "year": 1988,
+          "rank": 1, 
+          "students": 1000 };
+         
+        document.write("<h1>JSON EXAMPLE</h1>");
+        document.write("<br>");
+        document.write("<h3>School Name = "+JSONObj.name+"</h3>");
+        document.write("<h3>Year = "+JSONObj.year+"</h3>");
+        document.write("<h3>Rank in the city = "+JSONObj.rank+"</h3>");
+        document.write("<h3>No. of students studying="+JSONObj.students+"</h3>");    
     </script>
         
 </body>
